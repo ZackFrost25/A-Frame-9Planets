@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@436d40c/dist/aframe-extras.min.js"></script>
+    <title>A-Frame-Planets</title>
+</head>
+<body>
+    <a-scene>
+
+          <!--Motion-->
+            <a-entity id="rig" movement-controls="fly: true; speed: 3">
+                <a-entity camera
+                    position="50 10 100"
+                    rotation="0 0 180"
+                    look-controls>
+                </a-entity>
+            </a-entity>
+        
+        <!--Asset Manager-->
+        <!-- Found Planets at https://www.solarsystemscope.com/textures/
+            Earth found at http://www.planetaryvisions.com/Earth_texture_map.php?pid=4101
+            Stars at https://www.theatlantic.com/science/archive/2015/10/the-most-interesting-star-in-our-galaxy/410023/-->
+        <a-assets>
+            <img id="Sun" src="assets/Sun.jpeg">
+            <img id="Mercury" src="assets/Mercury.jpeg">
+            <img id="Venus" src="assets/Venus.jpeg">
+            <img id="Earth" src="assets/Ohio.jpeg">
+            <img id="Mars" src="assets/Mars.jpeg">
+            <img id="Jupiter" src="assets/Jupiter.jpeg">
+            <img id="Saturn" src="assets/Saturn.jpeg">
+            <img id="Uranus" src="assets/Uranus.jpeg">
+            <img id="Neptune" src="assets/Neptune.jpeg">
+            <img id="Stars" src="assets/Stars/jpeg">
+        </a-assets>
+        
+        <a-box
+            position="0 0 0"
+            scale="1000 1000 1000"
+            side="double"
+            src="assets/Stars.jpeg">
+        </a-box>
+
+
+        <!--Animation Code
+        <a-box color="#AA0000" position="0 4 0" animation="property: rotation; to: 0 360 0; loop: NaN; dur: 5000; easing: linear"> material="" geometry="">
+        </a-box> -->
+        
+
+        <!--Sun-->
+        <a-entity>
+            <a-sphere 
+            position="0 0 0"
+            scale="50 50 50"
+            side="double"
+            src="assets/Sun.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 1; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Mercury-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 880; 
+        easing: linear">
+            <a-sphere
+            position="60 0 0"
+            scale="0.5 0.5 0.5"
+            src="assets/Mercury.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 880; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Venus-->
+        <a-entity 
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 2250; 
+        easing: linear">
+            <a-sphere
+            position="70 0 0"
+            scale="1.5 1.5 1.5"
+            src="assets/Venus.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 2250; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Earth-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 3640; 
+        easing: linear">
+            <a-sphere 
+            position="80 0 0"
+            roation="0 180 0"
+            scale="1.5 1.5 1.5"
+            src="assets/Earth.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 3640; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Mars-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 6870; 
+        easing: linear">
+            <a-sphere 
+            position="90 0 0"
+            scale="0.75 0.75 0.75"
+            src="assets/Mars.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 6870; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Jupiter-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 43330; 
+        easing: linear">
+            <a-sphere 
+            position="120 0 0"
+            scale="11 11 11"
+            src="assets/Jupiter.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 43330; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Saturn-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 107560; 
+        easing: linear">
+            <a-sphere 
+            position="140 0 "
+            scale="4.5 4.5 4.5"
+            src="assets/Saturn.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 107560; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Uranus-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 306870; 
+        easing: linear">
+            <a-sphere 
+            position="150 0 0"
+            scale="2 2 2"
+            src="assets/Uranus.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 306870; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+        <!--Neptune-->
+        <a-entity
+        animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 601900; 
+        easing: linear">
+            <a-sphere 
+            position="160 0 0"
+            scale="2 2 2"
+            src="assets/Neptune.jpeg"
+            animation="property: rotation; 
+            to: 0 360 0; 
+            loop: true; 
+            dur: 601900; 
+            easing: linear">
+            </a-sphere>
+        </a-entity>
+
+    </a-scene>
+</body>
+</html>
