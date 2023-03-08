@@ -7,6 +7,14 @@
 <body>
     <a-scene>
         
+          <!--Motion-->
+            <a-entity id="rig" movement-controls="fly: true; speed: 20">
+                <a-entity camera
+                    position="0 1 0"
+                    look-controls>
+                </a-entity>
+            </a-entity>
+        
         <!--Asset Manager-->
         <!-- Found Planets at https://www.solarsystemscope.com/textures/
             Earth found at http://www.planetaryvisions.com/Earth_texture_map.php?pid=4101
